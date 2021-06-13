@@ -1,7 +1,7 @@
 # AppliedRegressionInR
 This is a final assignment for Applied Regression in R course
 
-##Completion requirements
+## Completion requirements
 
 To succesfuly complete this course, students are required to do the following:
 
