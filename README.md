@@ -16,3 +16,5 @@ To succesfuly complete this course, students are required to do the following:
 ## Dataset
 
 For this assignment I have picked Bechdel Test dataset https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-09/readme.md
+
+## Research problem
