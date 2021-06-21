@@ -1,16 +1,9 @@
 library(tidyverse)
 
-raw_bechdel <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/raw_bechdel.csv')
 movies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv')
-
-
-raw_bechdel %>% ggplot(aes(x=year))+ geom_histogram()
-raw_bechdel %>%  ggplot(aes(x= rating))+ geom_histogram()
-
 
 movies <- movies %>% 
   mutate(rated= as.factor(rated))
-
 
 movies<-movies %>%
   mutate(rated = replace(rated, rated =="N/A", NA)) %>% 
