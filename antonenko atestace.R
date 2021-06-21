@@ -21,3 +21,4 @@ movies<-movies %>%
   mutate(rated= fct_collapse(rated, "PG-13"= c("PG-13", "TV-14")))
 
 movies %>%  ggplot(aes(x= rated))+ geom_bar()
+movies %>% ggplot(aes(x= year))+ geom_histogram(binwidth = 1)
