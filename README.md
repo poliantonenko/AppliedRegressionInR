@@ -23,7 +23,7 @@ For this assignment I have picked Bechdel Test dataset https://github.com/rforda
 
 #### Data description
 
-![chart 1](https://github.com/poliantonenko/AppliedRegressionInR/tree/main/charts/binary.png)
+![chart 1](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/binary.png)
 
 #### Regression model
 
