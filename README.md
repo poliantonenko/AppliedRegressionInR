@@ -25,6 +25,12 @@ For this assignment I have picked Bechdel Test dataset https://github.com/rforda
 
 ![chart 1](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/binary.png)
 
+![chart 2](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/imdb%20rating.png)
+
+![chart 3](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/rated%20binary.png)
+
+![chart 4](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/binary%20year.png)
+
 #### Regression model
 
 #### Diagnostics
