@@ -1,4 +1,18 @@
+---
+  title: "Applied regression in R assignment"
+  author: "Polina Antonenko"
+---
+
+#LIBRARIES:
+
 library(tidyverse)
+library(ggeffects)
+install.packages("patchwork")
+library(patchwork)
+
+options(scipen = 999)
+
+#DATA IMPORT
 
 movies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv')
 
