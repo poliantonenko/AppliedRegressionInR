@@ -27,7 +27,7 @@ movies<-movies %>%
   mutate(rated= fct_collapse(rated, "PG"= c("PG", "TV-PG"))) %>% 
   mutate(rated= fct_collapse(rated, "PG-13"= c("PG-13", "TV-14")))
 
-
+#PLOTS
 movies %>%
   ggplot(aes(x= binary))+
   geom_bar()+
