@@ -19,15 +19,15 @@ For this assignment I have picked Bechdel Test dataset https://github.com/rforda
 
 ## Analysis and report
 
-#### Research problem definition
+### Research problem definition
 
-#### Variable selection
+### Variable selection
 
-##### Dependent variable
+#### Dependent variable
 
 - *binary* (binary pass or fail of bechdel test)
 
-##### Independent variables
+#### Independent variables
 
 - *year*
 
