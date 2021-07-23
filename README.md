@@ -21,6 +21,25 @@ For this assignment I have picked Bechdel Test dataset https://github.com/rforda
 
 #### Research problem definition
 
+#### Variable selection
+
+##### Dependent variable
+
+- *binary* (binary pass or fail of bechdel test)
+
+##### Independent variables
+
+- *year*
+
+- *rated*
+
+- *metascore*
+
+- *imbd_rating*
+
+- *runtime*
+
+
 #### Data description
 
 ![chart 1](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/binary.png)
