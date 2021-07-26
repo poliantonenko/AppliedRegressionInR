@@ -33,6 +33,8 @@ Does the binary outcome (variable "binary") differ depending on the year(variabl
 
 - *year* (year) - movies could become more feminist in recent years.
 
+#### Other independent variables
+
 - *rated* (rating of movie) - movies for adults might have less chances to pass the test, if it has violence, it's more likely to be done by men, sex and nudity mostly appear in heterosexual context. 
 
 - *metascore* (metascore rating) - reviewers might have better opinion about movies that pass the test.
@@ -42,18 +44,18 @@ Does the binary outcome (variable "binary") differ depending on the year(variabl
 - *runtime* (runtime) - women might have a bigger chance to appear and have a dialogue about something else in a movie if it's longer?
 
 
-#### Data description
+### Data description
 
-![chart 1](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/binary.png)
+#### Dependent variable
 
-![chart 2](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/imdb%20rating.png)
+#### Main independent variable
 
-![chart 3](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/rated%20binary.png)
+#### Other independent variables
 
-![chart 4](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/binary%20year.png)
 
-#### Regression model
 
-#### Diagnostics
+### Regression model
 
-#### Conclusion
+### Diagnostics
+
+### Conclusion
