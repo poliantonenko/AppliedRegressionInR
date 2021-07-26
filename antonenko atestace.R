@@ -28,25 +28,34 @@ movies<-movies %>%
   mutate(rated= fct_collapse(rated, "PG-13"= c("PG-13", "TV-14")))
 
 #PLOTS
-movies %>%
-  ggplot(aes(x= binary))+
-  geom_bar()+
-  theme_minimal()
+#dependent
+sum(is.na(movies$binary))#no missing values
 
 movies %>%
-  ggplot(aes(x= rated, fill= binary))+
-  geom_bar(position = "dodge")+
+  ggplot(aes(y= binary))+
+  geom_boxplot()+
   theme_minimal()
+
+#main independent
 
 movies %>%
   ggplot(aes(x=year, fill = binary))+
   geom_bar(position = "stack")+
   theme_minimal()
 
+#other independent
+
+movies %>%
+  ggplot(aes(x= rated, fill= binary))+
+  geom_bar(position = "dodge")+
+  theme_minimal()
+
 movies %>% 
   ggplot(aes(x= imdb_rating))+
   geom_histogram()+
   theme_minimal()
+
+movies %>% count(type)
 
 movies<- movies %>%
   mutate(binary= as.factor(binary))
