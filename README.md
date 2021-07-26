@@ -21,23 +21,25 @@ For this assignment I have picked Bechdel Test dataset https://github.com/rforda
 
 ### Research problem definition
 
+Does the binary outcome (variable "binary") differ depending on the year(variable "year")?
+
 ### Variable selection
 
 #### Dependent variable
 
 - *binary* (binary pass or fail of bechdel test)
 
-#### Independent variables
+#### Main independent variable
 
-- *year*
+- *year* (year) - movies could become more feminist in recent years.
 
-- *rated*
+- *rated* (rating of movie) - movies for adults might have less chances to pass the test, if it has violence, it's more likely to be done by men, sex and nudity mostly appear in heterosexual context. 
 
-- *metascore*
+- *metascore* (metascore rating) - reviewers might have better opinion about movies that pass the test.
 
-- *imbd_rating*
+- *imdb_rating* (IMDB rating) - same as for metascore.
 
-- *runtime*
+- *runtime* (runtime) - women might have a bigger chance to appear and have a dialogue about something else in a movie if it's longer?
 
 
 #### Data description
