@@ -29,39 +29,16 @@ movies<-movies %>%
 
 #PLOTS
 #dependent
-sum(is.na(movies$binary))#no missing values
+sum(is.na(movies$metascore))
 
-movies %>%
-  ggplot(aes(y= binary))+
-  geom_boxplot()+
-  theme_minimal()
 
 #main independent
 
-movies %>%
-  ggplot(aes(x=year, fill = binary))+
-  geom_bar(position = "stack")+
-  theme_minimal()
+
 
 #other independent
-
-movies %>%
-  ggplot(aes(x= rated, fill= binary))+
-  geom_bar(position = "dodge")+
-  theme_minimal()
 
 movies %>% 
   ggplot(aes(x= imdb_rating))+
   geom_histogram()+
   theme_minimal()
-
-movies %>% count(type)
-
-movies<- movies %>%
-  mutate(binary= as.factor(binary))
-
-movies$binary = as.numeric(movies$binary)
-
-mod1 =lm(binary~ year+imdb_rating+metascore+rated+budget_2013, data=movies)
-is.numeric(movies$year)
-summary(mod1)

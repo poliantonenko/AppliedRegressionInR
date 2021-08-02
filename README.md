@@ -21,27 +21,25 @@ For this assignment I have picked Bechdel Test dataset https://github.com/rforda
 
 ### Research problem definition
 
-Does the binary outcome (variable "binary") differ depending on the year(variable "year")?
+Does movie budget affect its metascore reviews?
 
 ### Variable selection
 
 #### Dependent variable
 
-- *binary* (binary pass or fail of bechdel test)
+- *metascore* (metascore rating)
 
 #### Main independent variable
 
-- *year* (year) - movies could become more feminist in recent years.
+
 
 #### Other independent variables
 
-- *rated* (rating of movie) - movies for adults might have less chances to pass the test, if it has violence, it's more likely to be done by men, sex and nudity mostly appear in heterosexual context. 
+- *year* (year) - the perceived quality of movies can grow with years of the industry developement. Also the metacritic was launched in 2001, it means that some reviews are done retrospectively, which can probably affect the result.
 
-- *metascore* (metascore rating) - reviewers might have better opinion about movies that pass the test.
+- *rated* (rating of movie) - maybe rating can affect the reviews as well.
 
-- *imdb_rating* (IMDB rating) - same as for metascore.
-
-- *runtime* (runtime) - women might have a bigger chance to appear and have a dialogue about something else in a movie if it's longer?
+- *runtime* (runtime) - movies can get boring if they're too long?
 
 
 ### Data description
