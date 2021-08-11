@@ -31,7 +31,7 @@ Does movie budget affect its metascore reviews?
 
 #### Main independent variable
 
-
+- *budget_2013* (budget as of release year)
 
 #### Other independent variables
 
@@ -40,6 +40,8 @@ Does movie budget affect its metascore reviews?
 - *rated* (rating of movie) - maybe rating can affect the reviews as well.
 
 - *runtime* (runtime) - movies can get boring if they're too long?
+
+- *binary* (binary outcome of Bechdel test) - movies which passed the test can be rated more positevily.
 
 
 ### Data description
