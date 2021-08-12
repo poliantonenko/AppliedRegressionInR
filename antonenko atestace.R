@@ -31,12 +31,43 @@ movies<-movies %>%
 #dependent
 sum(is.na(movies$metascore))
 
+meta_h <- 
+  movies %>% 
+  filter(!is.na(metascore)) %>%
+  ggplot(aes(x=metascore)) +
+  geom_histogram(color = "white")
+
+meta_b <-
+  movies %>% 
+  filter(!is.na(metascore)) %>% 
+  ggplot(aes(y=metascore)) +
+  geom_boxplot()
+
+meta_p <-
+  movies %>% 
+  filter(!is.na(metascore)) %>%
+  ggplot(aes(y=metascore, x=seq_along(metascore)))+
+  geom_point()+
+  labs(x="row numbers")
+
+meta_h+meta_b+meta_p
 
 #main independent
-
+sum(is.na(movies$budget_2013))#no missings
 
 
 #other independent
+#year
+sum(is.na(movies$year))#no missings
+
+#rated
+sum(is.na(movies$rated))
+
+#runtime
+sum(is.na(movies$runtime))
+
+#binary
+sum(is.na(movies$binary))#no missings
 
 movies %>% 
   ggplot(aes(x= imdb_rating))+
