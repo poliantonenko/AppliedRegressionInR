@@ -45,11 +45,11 @@ meta_h+meta_b+meta_p
 #main independent
 sum(is.na(movies$budget_2013))#no missings
 
-movies %>% 
+budget_uni<-movies %>% 
   ggplot(aes(x=budget_2013))+
   geom_histogram()
 
-movies %>%
+budget_bi<-movies %>%
   filter(!is.na(metascore)) %>%
   ggplot(aes(y=metascore, x= budget_2013))+
   geom_point()+
@@ -59,11 +59,11 @@ movies %>%
 #year
 sum(is.na(movies$year))#no missings
 
-movies %>% 
+year_uni<-movies %>% 
   ggplot(aes(x= year))+
   geom_bar()
 
-movies %>% 
+year_bi<-movies %>% 
   ggplot(aes(y= metascore, x= year))+
   geom_point()
 
@@ -81,11 +81,11 @@ movies<-movies %>%
   mutate(rated= fct_collapse(rated, "PG"= c("PG", "TV-PG"))) %>% 
   mutate(rated= fct_collapse(rated, "PG-13"= c("PG-13", "TV-14")))
 
-movies %>% 
+rated_uni<-movies %>% 
   ggplot(aes(x=rated))+
   geom_bar()
 
-movies %>% 
+rated_bi<-movies %>% 
   filter(!is.na(metascore)) %>% 
   ggplot(aes(x= rated, y= metascore))+
   geom_boxplot()
@@ -95,26 +95,31 @@ movies$runtime2 <- as.numeric(gsub(' min', '', movies$runtime))
 
 sum(is.na(movies$runtime2))
 
-movies %>% 
+runtime_uni<-movies %>% 
   filter(!is.na(runtime2)) %>% 
   ggplot(aes(x= runtime2))+
   geom_histogram(stat="count")
 
-movies %>% 
+runtime_bi<-movies %>% 
   filter(!is.na(runtime2)) %>% 
   filter(!is.na(metascore)) %>% 
-  ggplot(aes(x=metascore, y= runtime2))+
+  ggplot(aes(y=metascore, x= runtime2))+
   geom_point()
 
 #binary
 sum(is.na(movies$binary))#no missings
 
-movies %>% 
+binary_uni<-movies %>% 
   ggplot(aes(x= binary))+
   geom_bar()
 
-movies %>% 
+binary_bi<-movies %>% 
   filter(!is.na(metascore)) %>% 
   ggplot(aes(x= binary,y = metascore))+
   geom_boxplot()
-  
+
+(year_uni+year_bi)/(runtime_uni+runtime_bi)/ (rated_uni+ rated_bi)/(binary_uni+binary_bi)+
+  plot_annotation(tag_levels = 'A') & 
+  theme(plot.tag = element_text(size = 8))  
+
+####Model presentation and interpretation
