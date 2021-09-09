@@ -1,7 +1,7 @@
----
+
   title: "Applied regression in R assignment"
   author: "Polina Antonenko"
----
+
 
 #LIBRARIES:
 
@@ -128,6 +128,21 @@ movies <-
   movies %>% 
   mutate(year_c = year-mean(year),
          runtime_c = runtime2 - mean(runtime2))
-model<-lm(metascore~year+runtime2+rated+binary)
+model<-lm(metascore~year+runtime2+rated+binary, data=movies)
 
-model_c <- lm(metascore~year_c+runtime_c+rated+binary)
+model_c <- lm(metascore~year_c+runtime_c+rated+binary, data=movies)
+
+summary(model)
+
+####Model fit and diagnostics
+
+
+par(mfrow = c(2,2))
+
+plot(model)
+
+### Visual model presentation and interpretation
+
+model_marginal_effect <- plot(ggpredict(model, terms = c("year", "runtime2")), colors = c("red", "orange", "blue")) 
+
+model_marginal_effect
