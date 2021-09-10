@@ -1,8 +1,3 @@
-
-  title: "Applied regression in R assignment"
-  author: "Polina Antonenko"
-
-
 #LIBRARIES:
 
 library(tidyverse)
@@ -124,15 +119,16 @@ binary_bi<-movies %>%
 
 ####Model presentation and interpretation
 
-movies <-
-  movies %>% 
+movies2 <-
+  movies %>%
+  filter(!is.na(metascore)) %>% 
   mutate(year_c = year-mean(year),
          runtime_c = runtime2 - mean(runtime2))
-model<-lm(metascore~year+runtime2+rated+binary, data=movies)
+model<-lm(metascore~year+runtime2+rated+binary, data=movies2)
 
-model_c <- lm(metascore~year_c+runtime_c+rated+binary, data=movies)
+model_c <- lm(metascore~year_c+runtime_c+rated+binary, data=movies2)
 
-summary(model)
+summary(model_c)
 
 ####Model fit and diagnostics
 
