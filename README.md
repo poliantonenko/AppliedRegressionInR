@@ -48,6 +48,8 @@ Does movie budget affect its metascore reviews?
 
 #### Dependent variable
 
+![dependent](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/metascore%20plots.jpeg)
+
 #### Main independent variable
 
 #### Other independent variables
