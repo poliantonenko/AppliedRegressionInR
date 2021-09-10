@@ -41,14 +41,16 @@ meta_h+meta_b+meta_p
 sum(is.na(movies$budget_2013))#no missings
 
 budget_uni<-movies %>% 
-  ggplot(aes(x=budget_2013))+
+  ggplot(aes(x=log10(budget_2013)))+
   geom_histogram()
 
 budget_bi<-movies %>%
   filter(!is.na(metascore)) %>%
-  ggplot(aes(y=metascore, x= budget_2013))+
+  ggplot(aes(y=metascore, x= log10(budget_2013)))+
   geom_point()+
-  geom_smooth()  
+  geom_smooth()
+
+budget_uni+budget_bi
 
 #other independent
 #year
@@ -123,10 +125,12 @@ movies2 <-
   movies %>%
   filter(!is.na(metascore)) %>% 
   mutate(year_c = year-mean(year),
-         runtime_c = runtime2 - mean(runtime2))
-model<-lm(metascore~year+runtime2+rated+binary, data=movies2)
+         runtime_c = runtime2 - mean(runtime2),
+         budget_log = log10(budget_2013),
+         budget_log_c= budget_log- mean(budget_log))
+model<-lm(metascore~budget_log+year+runtime2+rated+binary, data=movies2)
 
-model_c <- lm(metascore~year_c+runtime_c+rated+binary, data=movies2)
+model_c <- lm(metascore~budget_log_c+year_c+runtime_c+rated+binary, data=movies2)
 
 summary(model_c)
 
