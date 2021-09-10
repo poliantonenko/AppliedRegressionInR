@@ -54,7 +54,7 @@ Does movie budget affect its metascore reviews?
 
 #### Other independent variables
 
-
+![independent](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/independent.jpeg)
 
 ### Regression model
 
