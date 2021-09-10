@@ -31,7 +31,7 @@ Does movie budget affect its metascore reviews?
 
 #### Main independent variable
 
-- *budget_2013* (budget as of release year)
+- *budget_2013* (budget normalized to 2013)
 
 #### Other independent variables
 
