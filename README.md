@@ -48,6 +48,8 @@ Does movie budget affect its metascore reviews?
 
 #### Dependent variable
 
+Variable *metascore* has 378 missing values. The distribution looks pretty normal, it's a bit skewed.
+
 ![dependent](https://github.com/poliantonenko/AppliedRegressionInR/blob/main/charts/metascore%20plots.jpeg)
 
 #### Main independent variable
